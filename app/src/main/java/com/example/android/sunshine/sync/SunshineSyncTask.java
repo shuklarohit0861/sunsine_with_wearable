@@ -141,6 +141,8 @@ public class SunshineSyncTask {
                         })
                         .addApi(Wearable.API)
                         .build();
+
+                mGoogleApiClient.connect();
                 Uri uri = WeatherContract.WeatherEntry.CONTENT_URI;
                 String sortOrder = WeatherContract.WeatherEntry.COLUMN_DATE + " ASC";
                 Cursor cursor = sunshineContentResolver.query(uri, MainActivity.MAIN_FORECAST_PROJECTION,WeatherContract.WeatherEntry.getSqlSelectForTodayOnwards(),null,sortOrder);
