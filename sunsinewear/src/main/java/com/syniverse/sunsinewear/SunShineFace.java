@@ -159,7 +159,7 @@ public class SunShineFace extends CanvasWatchFaceService {
             mTemp = new Paint();
             mTemp = createTextPaint(resources.getColor(R.color.digital_text));
 
-
+            mGoogleApiClient.connect();
 
 
             line = new Paint();
